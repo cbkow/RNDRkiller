@@ -10,8 +10,8 @@ This PowerShell script will poll CPU activity and GPU activity (from nvidia-smi)
 - `$cpuThreshold` This is the CPU activity threshold variable
 - `$gpuThreshold` This is the GPU activity threshold variable
 - `$checkInterval` This is the duration we will wait before attempting again after the threshold values are not met.
-- `$postCloseDelay` This is how long we will wait after kill RNDR before relaunching it.
+- `$postCloseDelay` This is how long we will wait after killing RNDR before relaunching it.
 - `$nvidiaSmiPath` You shouldn't have to change this. If you have installed any NVIDIA drivers, this path already exists.
 
 ### Suggested Usage:
-In Task Scheduler, set up a daily scheduled task for the early AM to launch the `RNDRkiller.bat`. It should poll for CPU and GPU usage and restart the client if it finds both under the threshold. It will then close after a successful run. If it finds CPU or GPU activity above the threshold, it will pause for 5 minutes (by default) and then try again.
+In Task Scheduler, set up a daily scheduled task to launch `RNDRkiller.bat` in the early morning. It should poll for CPU and GPU usage and restart the client if it finds both under the threshold. It will then close after a successful run. If it detects CPU or GPU activity above the threshold, it will pause for 5 minutes (by default) and then attempt to continue.
