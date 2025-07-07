@@ -2,7 +2,7 @@
 $cpuThreshold   = 10         # CPU % threshold to trigger action
 $gpuThreshold   = 5          # GPU % threshold to trigger action
 $checkInterval  = 300        # Check interval in seconds (5 minutes)
-$postCloseDelay = 180        # Delay before launching second app (3 minutes)
+$postCloseDelay = 180        # Delay before relaunching RNDR (3 minutes)
 
 $appToClose  = "tcpsvcs.exe"
 $appToLaunch = "C:\Path\to\your\RNDR\client\rndrclient.exe"
